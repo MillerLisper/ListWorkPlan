@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-</LinearLayout>
+    <View
+        android:id="@+id/mlpViewTop"
+        android:layout_marginLeft="@dimen/view_padding"
+        android:layout_width="@dimen/line_width"
+        android:layout_height="@dimen/line_height"
+        android:background="@android:color/darker_gray"></View>
+    <TextView
+        android:layout_below="@id/mlpViewTop"
+        android:id="@+id/mlpViewRound"
+        android:layout_marginLeft="@dimen/radio_padding"
+        android:layout_width="@dimen/radio_width"
+        android:layout_height="@dimen/radio_width"
+        android:background="@drawable/shape_gray_round"></TextView>
+    <View
+        android:layout_below="@id/mlpViewRound"
+        android:id="@+id/mlpViewBottom"
+        android:layout_marginLeft="@dimen/view_padding"
+        android:layout_width="@dimen/line_width"
+        android:layout_height="@dimen/line_height"
+        android:background="@android:color/darker_gray"></View>
+
+    <TextView
+        android:id="@+id/mlpTvContent"
+        android:layout_alignTop="@id/mlpViewTop"
+        android:layout_alignBottom="@id/mlpViewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:textColor="@android:color/darker_gray"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/text_size"
+        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="What do today?What do today?What do today?What do today?What do today?What do today?What do today?What do today?What do today?What do today?What do today?"
+        android:layout_toRightOf="@id/mlpViewRound"/>
+</RelativeLayout>
